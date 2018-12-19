@@ -6,10 +6,13 @@ import PropTypes from 'prop-types';
 
 export default class App extends React.Component {
   render() {
-    return(<div>
-      <TitleBar title={this.props.title} />
-      <PlayerList players={this.props.players}/>
-      <AddPlayer />
+    return(
+      <div>
+      <TitleBar title={this.props.title} subTitle="Created by Scott Cameron" />
+      <div className="wrapper">
+        <PlayerList players={this.props.players}/>
+        <AddPlayer />
+      </div>
     </div>);
   }
 };
